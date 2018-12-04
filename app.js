@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 var bodyParser= require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var boardRouter = require('./routes/boards');
 
 mongoose.connect('mongodb://localhost:27017/alarmy', { useNewUrlParser: true });
 var app = express();
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/boards',boardRouter);
 
 module.exports = app;
 
