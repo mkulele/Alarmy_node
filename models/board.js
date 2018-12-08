@@ -6,7 +6,8 @@ const boardSchema = mongoose.Schema({
     time:{ type: String, required: true },//작성시간
     owner: { type: String, required: true },//작성자
     title:{ type: String, required: true },//제목
-    content:{ type: String, required: true }//내용
+    content:{ type: String, required: true },//내용
+    verified:{ type: Boolean, required: true }
 
 });
 
