@@ -27,16 +27,16 @@ router.post("/add", (req, res, next) => {
                         const addlist= new List({
                             _id: new mongoose.Types.ObjectId(),
                             time: timestamp,
-                            title:req.body.category,
-                            verified: true
-
+                            category:req.body.category,
+                            verified:true
                         });
+
                         addlist
                             .save()
                             .then(result => {
                                 console.log(result);
                                 res.status(201).json({
-                                    message: "글쓰기 완료"
+                                    message: "카테고리 생성 완료"
                                 });
                             })
                             .catch(err => {
