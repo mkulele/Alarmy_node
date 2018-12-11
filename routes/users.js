@@ -31,6 +31,7 @@ router.post("/", (req, res, next) => {
                             grade:req.body.grade,
                             email: req.body.email,
                             passwd: req.body.passwd,
+                            verified:false
                         });
                         user
                             .save()
