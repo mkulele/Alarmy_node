@@ -66,12 +66,12 @@ router.post("/login", (req, res, next) => {
                     message: "아이디와 비밀번호를 확인해주세요."
                 });
             }
-            if (req.body.passwd !== user[0].passwd){
-                    return res.status(401).json({
-                        message: "아이디와 비밀번호를 확인해주세요."
-                    });
-                }
-                if (result) {
+            if (req.body.passwd !== user[0].passwd) {
+                return res.status(401).json({
+                    message: "아이디와 비밀번호를 확인해주세요."
+                });
+            }
+                else{
                     const token = jwt.sign(
                         {
                             id: user[0].id,
@@ -87,13 +87,9 @@ router.post("/login", (req, res, next) => {
                         token: token
                     });
                 }
-                res.status(401).json({
-                    message: "로그인 실패"
-                });
+
             });
         });
-
-
 
 
 
