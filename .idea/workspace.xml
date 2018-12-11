@@ -47,8 +47,8 @@
       <file leaf-file-name="lists.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/lists.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="457">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/models/list.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -65,7 +65,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="-344">
               <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
@@ -100,8 +100,8 @@
         <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/models/list.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/models/list.js" />
         <option value="$PROJECT_DIR$/routes/lists.js" />
       </list>
     </option>
@@ -237,7 +237,7 @@
       <workItem from="1544528733724" duration="5256000" />
       <workItem from="1544535463673" duration="31000" />
       <workItem from="1544537367851" duration="655000" />
-      <workItem from="1544539304166" duration="3205000" />
+      <workItem from="1544539304166" duration="3455000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup">
       <created>1541859692869</created>
@@ -264,10 +264,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51616000" />
+    <option name="totallyTimeSpent" value="51866000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="30" width="1072" height="706" extended-state="0" />
+    <frame x="-31" y="37" width="1072" height="706" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7169811" visible="true" weight="0.16745956" />
@@ -639,7 +639,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="-344">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
@@ -647,14 +647,14 @@
     <entry file="file://$PROJECT_DIR$/models/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/lists.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="457">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -27,7 +27,7 @@ router.post("/add", (req, res, next) => {
                         const addlist= new List({
                             _id: new mongoose.Types.ObjectId(),
                             time: timestamp,
-                            category:req.body.category,
+                            category:req.body.boardlist,
                             verified:true
                         });
 
