@@ -29,7 +29,7 @@ router.post("/add", (req, res, next) => {
                             time: timestamp,
                             title:req.body.title,
                             verified: true
-                            //idx:req.body.idx
+
                         });
                         addlist
                             .save()
