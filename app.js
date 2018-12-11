@@ -8,7 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var boardRouter = require('./routes/boards');
 
-mongoose.connect('mongodb://localhost:27017/alarmy', { useNewUrlParser: true });
+//mongoose.connect('mongodb://localhost:27017/alarmy', { useNewUrlParser: true });
+mongoose.connect('mongodb://alarmy:a123123@ds113134.mlab.com:13134/heroku_r5qk6xq3', { useNewUrlParser: true });
 var app = express();
 mongoose.Promise = global.Promise;
 

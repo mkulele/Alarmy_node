@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.rout
+    //res.rout
   res.send('get respond with a resource boards');
 
 });

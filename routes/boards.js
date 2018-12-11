@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 var http = require('http');
 var url = require('url');
 var querystring = require('querystring');
+var fs=require('fs');
 
 
 /* GET users listing. */
@@ -79,10 +80,22 @@ router.get("/list", (req, res, next) => {
 
     Board.find({verified:true})
         .exec()
-        .then(Post => {
-            res.status(201).json({
-                Post
-            });
+        .then(List => {
+            fs.writeFile(__dirname+"/../list.json",
+                JSON.stringify(List,null,'\t'),"utf8",function (err,data) {
+                fs.readFile(__dirname+"/../list.json", function (err, data) {
+                        var listjson = JSON.parse(data);
+                        console.log('data:' + listjson);
+                    res.status(201).json(
+                        listjson
+                    );
+                    });
+
+
+
+                });
+
+
 
         })
         .catch(err => {
