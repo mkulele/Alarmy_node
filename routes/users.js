@@ -92,6 +92,26 @@ router.post("/login", (req, res, next) => {
         });
 
 
+router.get("/view/:Name", (req, res, next) => {
+
+    var Name = req.params.Name;
+
+    Board.find({name : Name })
+        .exec()
+        .then(User => {
+            res.status(201).json({
+                title:User[0].id,
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
+
 
 
 
