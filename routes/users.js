@@ -96,7 +96,7 @@ router.get("/find/:ID", (req, res, next) => {
 
     var ID = req.params.ID;
 
-    Board.find({id : ID })
+    User.find({id : ID })
         .exec()
         .then(User => {
             res.status(201).json({
