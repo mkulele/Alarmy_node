@@ -92,7 +92,7 @@ router.post("/login", (req, res, next) => {
         });
 
 
-router.get("/view/:Name", (req, res, next) => {
+router.get("/find/:Name", (req, res, next) => {
 
     var Name = req.params.Name;
 
