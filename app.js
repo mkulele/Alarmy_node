@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 var bodyParser= require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var boardRouter = require('./routes/boards');
+var boardsRouter = require('./routes/boards');
+var listsRouter = require('./routes/listss');
 
 //mongoose.connect('mongodb://localhost:27017/alarmy', { useNewUrlParser: true });
 mongoose.connect('mongodb://alarmy_admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l', { useNewUrlParser: true });
@@ -37,7 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/boards',boardRouter);
+app.use('/boards',boardsRouter);
+app.use('/lists',listsRouter);
 
 module.exports = app;
 
