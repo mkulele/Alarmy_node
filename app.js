@@ -7,7 +7,7 @@ var bodyParser= require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var boardsRouter = require('./routes/boards');
-var listsRouter = require('./routes/listss');
+var listsRouter = require('./routes/lists');
 
 //mongoose.connect('mongodb://localhost:27017/alarmy', { useNewUrlParser: true });
 mongoose.connect('mongodb://alarmy_admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l', { useNewUrlParser: true });
