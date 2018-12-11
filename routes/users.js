@@ -100,7 +100,7 @@ router.get("/find/:ID", (req, res, next) => {
         .exec()
         .then(User => {
             res.status(201).json({
-                name:User[0].name,
+                name:User[0].name
             });
         })
         .catch(err => {
