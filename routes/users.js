@@ -66,8 +66,7 @@ router.post("/login", (req, res, next) => {
                     message: "아이디와 비밀번호를 확인해주세요."
                 });
             }
-            bcrypt.compare(req.body.passwd, user[0].passwd, (err, result) => {
-                if (err) {
+            if (req.body.passwd !== user[0].passwd){
                     return res.status(401).json({
                         message: "아이디와 비밀번호를 확인해주세요."
                     });
@@ -92,14 +91,9 @@ router.post("/login", (req, res, next) => {
                     message: "로그인 실패"
                 });
             });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({
-                error: err
-            });
         });
-});
+
+
 
 
 
