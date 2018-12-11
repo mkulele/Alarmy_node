@@ -3,7 +3,7 @@ var router = express.Router();
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -22,12 +22,6 @@ router.post("/", (req, res, next) => {
                     message: "이미 존재하는 이메일입니다."
                 });
             } else {
-                bcrypt.hash(req.body.passwd, 10, (err, hash) => {
-                    if (err) {
-                        return res.status(500).json({
-                            error: err
-                        });
-                    } else {
                         const user = new User({
                             _id: new mongoose.Types.ObjectId(),
                             id:req.body.id,
@@ -36,7 +30,7 @@ router.post("/", (req, res, next) => {
                             club:req.body.club,
                             grade:req.body.grade,
                             email: req.body.email,
-                            passwd: hash,
+                            passwd: req.body.passwd,
                         });
                         user
                             .save()
@@ -54,8 +48,8 @@ router.post("/", (req, res, next) => {
                             });
                     }
                 });
-            }
-        });
+
+
 });
 
 
