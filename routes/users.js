@@ -92,15 +92,15 @@ router.post("/login", (req, res, next) => {
         });
 
 
-router.get("/find/:Name", (req, res, next) => {
+router.get("/find/:ID", (req, res, next) => {
 
-    var Name = req.params.Name;
+    var ID = req.params.ID;
 
-    Board.find({name : Name })
+    Board.find({id : ID })
         .exec()
         .then(User => {
             res.status(201).json({
-                id:User[0].id,
+                name:User[0].name,
             });
         })
         .catch(err => {
