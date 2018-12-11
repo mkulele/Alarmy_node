@@ -71,16 +71,16 @@ router.get("/view/:viewid", (req, res, next) => {
             });
         });
 });
+*/
 
+router.get("/view", (req, res, next) => {
 
-router.get("/list", (req, res, next) => {
-
-    Board.find({verified:true})
+    List.find({verified:true})
         .exec()
         .then(List => {
-            fs.writeFile(__dirname+"/../list.json",
+            fs.writeFile(__dirname+"/../list_category.json",
                 JSON.stringify(List,null,'\t'),"utf8",function (err,data) {
-                fs.readFile(__dirname+"/../list.json", function (err, data) {
+                fs.readFile(__dirname+"/../list_category.json", function (err, data) {
                         var listjson = JSON.parse(data);
                         console.log('data:' + listjson);
                     res.status(201).json(
@@ -88,12 +88,8 @@ router.get("/list", (req, res, next) => {
                     );
                     });
 
-
-
                 });
-
-
-
+            
         })
         .catch(err => {
             console.log(err);
@@ -102,5 +98,5 @@ router.get("/list", (req, res, next) => {
             });
         });
 });
-*/
+
 module.exports = router;
