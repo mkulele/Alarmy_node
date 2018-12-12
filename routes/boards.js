@@ -22,7 +22,7 @@ router.post("/write", (req, rese, next) => {
            db.collection('idx').findOne(query, function (err, res) {
                if (err) console.log(err);
                else {
-                   var boardidx = req.text;
+                   var boardidx = res.idx_num + 1;
 
                    var operator = {$set: {idx_num: boardidx}};
 
@@ -125,25 +125,54 @@ router.get("/list/:cg", (req, res, next) => {
 
 
 
-router.post("/edit", (req, rese, next) => {
+router.post("/edit/:idx", (req, rese, next) => {
+    var idx = req.params.idx;
     mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
     var db=mongoose.connection;
-    var query = {num:req.idx};
-    var editcontent = req.text;
+    var query = {idx:idx};
     db.collection('boards').findOne(query, function (err, res) {
         if (err) console.log(err);
         else {
-            console.log("edit idx : "+req.idx);
-            var operator = {$set: {content:editcontent}};
-            db.collection('boards').update(query, operator, function (err, docs) {
+            var boardidx = res.idx_num + 1;
+            var operator = {$set: {idx_num: boardidx}};
+
+            db.collection('idx').update(query, operator, function (err, docs) {
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log('edit successfully!');
-                    rese.status(201).json({
-                        message : 'edit successfully'
-                    });
+                    console.log('updated successfully!');
                 }
+                var date = new Date();
+                var year = String(date.getFullYear());
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                var timestamp = year + '-' + month + '-' + day + '/' + hour + ':' + minute + ':' + second;
+
+
+                const posting = new Board({
+                    _id: new mongoose.Types.ObjectId(),
+                    num: boardidx,
+                    time: timestamp,
+                    title: req.body.title,
+                    owner: req.body.name,
+                    ownerid: req.body.ownerid,
+                    content: req.body.text,
+                    category: req.body.category,
+                    verified: true
+                });
+
+                posting
+                    .save()
+                    .then(result => {
+                        console.log(result);
+                        rese.status(201).json({
+                            idx: boardidx
+                        });
+                    })
+
             });
         }
     });
