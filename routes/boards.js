@@ -179,4 +179,30 @@ router.post("/edit/:idx", (req, rese, next) => {
 
 });
 
+
+router.post("/edit", (req, rese, next) => {
+    mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
+    var db=mongoose.connection;
+    var query = {num:req.body.idx};
+    var editcontent = req.body.text;
+    db.collection('boards').findOne(query, function (err, res) {
+        if (err) console.log(err);
+        else {
+            console.log("edit idx : "+req.idx);
+            var operator = {$set: {content:editcontent}};
+            db.collection('boards').update(query, operator, function (err, docs) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('edit successfully!');
+                    rese.status(201).json({
+                        message : 'edit successfully'
+                    });
+                }
+            });
+        }
+    });
+
+});
+
 module.exports = router;
