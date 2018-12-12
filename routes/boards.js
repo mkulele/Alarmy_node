@@ -7,7 +7,6 @@ var url = require('url');
 var querystring = require('querystring');
 var fs=require('fs');
 var Client = require('mongodb').MongoClient;
-var idxdburl = "mongodb://alarmy_admin:a123123@ds011870.mlab.com:11870";
 //var idxdburl = "mongodb://localhost:27017";
 
 
@@ -18,15 +17,14 @@ router.get('/', function(req, res, next) {
 
 
 router.post("/write", (req, res, next) => {
-    Client.connect(idxdburl, function(error, idx) {
+    Client.connect('mongodb://alarmy_admin:a123123@ds011870.mlab.com:11870', function(error, idx) {
         var db = idx.db('heroku_s0vvng4l');
         var query = {idx_title:'boardidx'};
-        var boardidx;
 
         db.collection('idx').findOne(query,function (err,res) {
             if (err) console.log(err);
             else {
-                boardidx=res.idx_num+1;
+                var boardidx=res.idx_num+1;
 
                 var operator = {$set: {idx_num:boardidx}};
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="727336fa-999f-4af0-b624-f555b1279189" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/boards.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,20 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="boards.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="boards.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/boards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="103">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -94,8 +86,8 @@
         <option value="$PROJECT_DIR$/routes/lists.js" />
         <option value="$PROJECT_DIR$/models/board.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/boards.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/routes/boards.js" />
       </list>
     </option>
   </component>
@@ -116,8 +108,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="287" />
-    <option name="y" value="302" />
+    <option name="x" value="138" />
+    <option name="y" value="137" />
     <option name="width" value="1072" />
     <option name="height" value="706" />
   </component>
@@ -232,7 +224,7 @@
       <workItem from="1544535463673" duration="31000" />
       <workItem from="1544537367851" duration="655000" />
       <workItem from="1544539304166" duration="4768000" />
-      <workItem from="1544618858912" duration="5316000" />
+      <workItem from="1544618858912" duration="5621000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup">
       <created>1541859692869</created>
@@ -259,19 +251,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58495000" />
+    <option name="totallyTimeSpent" value="58800000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="287" y="302" width="1072" height="706" extended-state="0" />
+    <frame x="138" y="137" width="1072" height="706" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7122642" visible="true" weight="0.16745956" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7122642" visible="true" weight="0.16745956" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30377668" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30377668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" sideWeight="0.28773585" side_tool="true" visible="true" weight="0.16745956" />
@@ -659,17 +651,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/boards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/boards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
         </state>
       </provider>
     </entry>
