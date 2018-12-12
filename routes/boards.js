@@ -129,7 +129,7 @@ router.post("/edit", (req, rese, next) => {
     mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
     var db=mongoose.connection;
     var query = {num:req.params.idx};
-    var editcontent = req.params.text;
+    var editcontent = req.params.text.toString();
     db.collection('boards').findOne(query, function (err, res) {
         if (err) console.log(err);
         else {
