@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="727336fa-999f-4af0-b624-f555b1279189" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/board.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/boards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/lists.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +22,8 @@
       <file leaf-file-name="boards.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/boards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2147">
-              <caret line="124" column="19" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+            <state relative-caret-position="201">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -88,8 +85,8 @@
         <option value="$PROJECT_DIR$/models/list.js" />
         <option value="$PROJECT_DIR$/routes/lists.js" />
         <option value="$PROJECT_DIR$/models/board.js" />
-        <option value="$PROJECT_DIR$/routes/boards.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/boards.js" />
       </list>
     </option>
   </component>
@@ -225,7 +222,7 @@
       <workItem from="1544535463673" duration="31000" />
       <workItem from="1544537367851" duration="655000" />
       <workItem from="1544539304166" duration="4768000" />
-      <workItem from="1544618858912" duration="3592000" />
+      <workItem from="1544618858912" duration="3850000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup">
       <created>1541859692869</created>
@@ -252,7 +249,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56771000" />
+    <option name="totallyTimeSpent" value="57029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="149" y="23" width="1072" height="706" extended-state="0" />
@@ -661,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/boards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="124" column="19" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+        <state relative-caret-position="201">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>

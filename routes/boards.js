@@ -7,8 +7,8 @@ var url = require('url');
 var querystring = require('querystring');
 var fs=require('fs');
 var Client = require('mongodb').MongoClient;
-//var idxdburl = "mongodb://alarmy_admin:a123123@ds011870.mlab.com:11870";
-var idxdburl = "mongodb://localhost:27017";
+var idxdburl = "mongodb://alarmy_admin:a123123@ds011870.mlab.com:11870";
+//var idxdburl = "mongodb://localhost:27017";
 
 
 /* GET users listing. */
@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 
 router.post("/write", (req, res, next) => {
     Client.connect(idxdburl, function(error, idx) {
-        var db = idx.db('alarmy');
+        var db = idx.db('heroku_s0vvng4l');
         var query = {idx_title:'boardidx'};
         var boardidx;
 
