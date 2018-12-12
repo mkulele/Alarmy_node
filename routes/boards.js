@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post("/write", (req, res, next) => {
+router.post("/write", (req, rese, next) => {
     mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
           var db=mongoose.connection;
            var query = {idx_title: 'boardidx'};
@@ -32,6 +32,7 @@ router.post("/write", (req, res, next) => {
                        } else {
                            console.log('updated successfully!');
                        }
+
                        var date = new Date();
                        var year = String(date.getFullYear());
                        var month = date.getMonth() + 1;
@@ -58,13 +59,14 @@ router.post("/write", (req, res, next) => {
                            .save()
                            .then(result => {
                                console.log(result);
-                               res.status(201).json({
+                               rese.status(201).json({
                                    idx: boardidx
                                });
                            })
 
                    });
-               } });
+               }
+           });
 
     });
 

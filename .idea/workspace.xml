@@ -22,8 +22,8 @@
       <file leaf-file-name="boards.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/boards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+            <state relative-caret-position="734">
+              <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -223,7 +223,7 @@
       <workItem from="1544535463673" duration="31000" />
       <workItem from="1544537367851" duration="655000" />
       <workItem from="1544539304166" duration="4768000" />
-      <workItem from="1544618858912" duration="8083000" />
+      <workItem from="1544618858912" duration="8564000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup">
       <created>1541859692869</created>
@@ -250,7 +250,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61262000" />
+    <option name="totallyTimeSpent" value="61743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="29" width="1072" height="706" extended-state="0" />
@@ -659,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/boards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+        <state relative-caret-position="734">
+          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
         </state>
       </provider>
     </entry>
