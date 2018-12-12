@@ -62,7 +62,7 @@ router.post("/write", (req, res, next) => {
                         .then(result => {
                             console.log(result);
                             res.status(201).json({
-                                message: "글쓰기 완료"
+                                idx:boardidx
                             });
                         })
 
