@@ -12,6 +12,7 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "fs": "0.0.1-security",
     "jsonwebtoken": "^8.3.0",
     "mongoclient": "^1.0.3",
     "mongodb": "^3.1.10",

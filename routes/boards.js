@@ -32,7 +32,6 @@ router.post("/write", (req, rese, next) => {
                        } else {
                            console.log('updated successfully!');
                        }
-
                        var date = new Date();
                        var year = String(date.getFullYear());
                        var month = date.getMonth() + 1;
@@ -99,13 +98,14 @@ router.get("/view/:viewid", (req, res, next) => {
 });
 
 
-router.get("/list", (req, res, next) => {
+router.get("/list/:cg", (req, res, next) => {
+    var cg = req.params.cg;
 
-    Board.find({verified:true})
+    Board.find({verified:true, category:cg})
         .exec()
         .then(List => {
             fs.writeFile(__dirname+"/../list.json",
-                JSON.stringify(List,null,'\t'),"utf8",function (err,data) {
+                JSON.stringify(List,null,'\t'),"utf8",function (error, jdata) {
                 fs.readFile(__dirname+"/../list.json", function (err, data) {
                         var listjson = JSON.parse(data);
                         console.log('data:' + listjson);
