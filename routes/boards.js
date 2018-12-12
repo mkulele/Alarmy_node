@@ -125,59 +125,6 @@ router.get("/list/:cg", (req, res, next) => {
 
 
 
-router.post("/edit/:idx", (req, rese, next) => {
-    var idx = req.params.idx;
-    mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
-    var db=mongoose.connection;
-    var query = {idx:idx};
-    db.collection('boards').findOne(query, function (err, res) {
-        if (err) console.log(err);
-        else {
-            var boardidx = res.idx_num + 1;
-            var operator = {$set: {idx_num: boardidx}};
-
-            db.collection('idx').update(query, operator, function (err, docs) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log('updated successfully!');
-                }
-                var date = new Date();
-                var year = String(date.getFullYear());
-                var month = date.getMonth() + 1;
-                var day = date.getDate();
-                var hour = date.getHours();
-                var minute = date.getMinutes();
-                var second = date.getSeconds();
-                var timestamp = year + '-' + month + '-' + day + '/' + hour + ':' + minute + ':' + second;
-
-
-                const posting = new Board({
-                    _id: new mongoose.Types.ObjectId(),
-                    num: boardidx,
-                    time: timestamp,
-                    title: req.body.title,
-                    owner: req.body.name,
-                    ownerid: req.body.ownerid,
-                    content: req.body.text,
-                    category: req.body.category,
-                    verified: true
-                });
-
-                posting
-                    .save()
-                    .then(result => {
-                        console.log(result);
-                        rese.status(201).json({
-                            idx: boardidx
-                        });
-                    })
-
-            });
-        }
-    });
-
-});
 
 
 router.post("/edit", (req, rese, next) => {
@@ -197,6 +144,32 @@ router.post("/edit", (req, rese, next) => {
                     console.log('edit successfully!');
                     rese.status(201).json({
                         message : 'edit successfully'
+                    });
+                }
+            });
+        }
+    });
+
+});
+
+
+router.get("/delete/:idx", (req, rese, next) => {
+    var d_idx = req.params.idx;
+    mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
+    var db=mongoose.connection;
+    var query = {num:d_idx};
+    db.collection('boards').findOne(query, function (err, res) {
+        if (err) console.log(err);
+        else {
+            console.log("edit idx : "+req.idx);
+            var operator = {$set: {verified:false}};
+            db.collection('boards').update(query, operator, function (err, docs) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('delete successfully!');
+                    rese.status(201).json({
+                        message : 'delete successfully'
                     });
                 }
             });
