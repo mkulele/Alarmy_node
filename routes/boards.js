@@ -22,7 +22,7 @@ router.post("/write", (req, rese, next) => {
            db.collection('idx').findOne(query, function (err, res) {
                if (err) console.log(err);
                else {
-                   var boardidx = res.idx_num + 1;
+                   var boardidx = req.text;
 
                    var operator = {$set: {idx_num: boardidx}};
 
@@ -121,6 +121,32 @@ router.get("/list/:cg", (req, res, next) => {
                 error: err
             });
         });
+});
+
+
+
+router.post("/edit", (req, rese, next) => {
+    mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
+    var db=mongoose.connection;
+    var query = {num:req.params.idx};
+    db.collection('boards').findOne(query, function (err, res) {
+        if (err) console.log(err);
+        else {
+            var operator = {$set: {content:req.params.text}};
+
+            db.collection('boards').update(query, operator, function (err, docs) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('edit successfully!');
+                    rese.status(201).json({
+                        message : 'edit successfully'
+                    });
+                }
+            });
+        }
+    });
+
 });
 
 module.exports = router;
