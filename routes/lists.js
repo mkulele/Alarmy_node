@@ -99,4 +99,29 @@ router.get("/view", (req, res, next) => {
         });
 });
 
+
+
+router.post("/delete", (req, rese, next) => {
+    mongoose.connect('mongodb://admin:a123123@ds011870.mlab.com:11870/heroku_s0vvng4l',{ useNewUrlParser: true });
+    var db=mongoose.connection;
+    var query = {category:req.body.category};
+    db.collection('lists').findOne(query, function (err, res) {
+        if (err) console.log(err);
+        else {
+            var operator = {$set: {verified:false}};
+            db.collection('lists').update(query, operator, function (err, docs) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('delete list successfully!');
+                    rese.status(201).json({
+                        message : 'delete list successfully'
+                    });
+                }
+            });
+        }
+    });
+
+});
+
 module.exports = router;
