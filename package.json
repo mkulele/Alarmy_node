@@ -13,6 +13,8 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "jsonwebtoken": "^8.3.0",
+    "mongoclient": "^1.0.3",
+    "mongodb": "^3.1.10",
     "mongoose": "^5.3.11",
     "morgan": "~1.9.0",
     "querystring": "^0.2.0",
