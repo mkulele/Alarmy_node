@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="727336fa-999f-4af0-b624-f555b1279189" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/lists.js" afterDir="false" />
-    </list>
+    <list default="true" id="727336fa-999f-4af0-b624-f555b1279189" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -49,8 +47,8 @@
       <file leaf-file-name="lists.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/lists.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+            <state relative-caret-position="241">
+              <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -232,7 +230,7 @@
       <workItem from="1544535463673" duration="31000" />
       <workItem from="1544537367851" duration="655000" />
       <workItem from="1544539304166" duration="4768000" />
-      <workItem from="1544618858912" duration="13345000" />
+      <workItem from="1544618858912" duration="13732000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup">
       <created>1541859692869</created>
@@ -259,7 +257,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66524000" />
+    <option name="totallyTimeSpent" value="66911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="139" y="64" width="1072" height="706" extended-state="0" />
@@ -668,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/lists.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+        <state relative-caret-position="241">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
         </state>
       </provider>
     </entry>
